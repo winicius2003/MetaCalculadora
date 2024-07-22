@@ -1,0 +1,8 @@
+com\example\controller\MetaController.class
+com\example\meta_calculadora\service\MetaService.class
+com\model\MetaResponse.class
+com\example\meta_calculadora\controller\MetaController.class
+com\example\service\MetaService.class
+com\example\meta_calculadora\MetaCalculadoraApplication.class
+com\example\meta_calculadora\model\MetaResponse.class
+com\example\MetaCalculadoraApplication.class
