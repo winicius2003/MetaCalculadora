@@ -13,18 +13,18 @@ body {
     background-color: white; /* Fundo branco para gráficos, resultados e projeções */
     padding: 20px; /* Adiciona padding ao redor */
     border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destaque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* para destaque */
     margin-bottom: 20px; /* Espaçamento inferior */
     text-align: center; /* Centraliza o conteúdo */
 }
 
 .pie-chart-container {
-    max-width: 300px; /* Reduz o tamanho máximo do gráfico de pizza */
+    max-width: 300px; /* tamanho máximo do gráfico de pizza */
     margin: auto; /* Centraliza o gráfico de pizza */
 }
 
 .small-chart {
-    width: 100% !important; /* Faz o gráfico de pizza ocupar toda a largura do container */
+    width: 100% !important; /*gráfico de pizza ocupar toda a largura do container */
 }
 
 .btn-dark-custom {
@@ -44,7 +44,7 @@ h3 {
 .content {
     text-align: center;
     width: 100%;
-    max-width: 500px; /* Ajuste conforme necessário */
+    max-width: 500px; /* Ajusta conforme necessário */
 }
 
 .form-container {
