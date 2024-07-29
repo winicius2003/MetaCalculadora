@@ -27,11 +27,11 @@ Desenvolvi uma aplicação web para ajudar meus colegas vendedores a calcular su
 
 3. Construa a imagem Docker:
 
-   docker build -t comissao-calculadora .
+   docker build -t meta-calculadora .
 
 4. Execute a imagem Docker:
 
-   docker run -p 8080:8080 comissao-calculadora
+   docker run -p 8080:8080 meta-calculadora
 
 5. Acesse a aplicação no navegador:
 
