@@ -10,42 +10,84 @@
         <div class="content">
             <h1 class="text-center mb-4">Meta Calculadora</h1>
             <div class="form-container">
-                <form action="/calcular-meta" method="get">
-                    <div class="form-group mb-2">
-                        <label for="diasRealizados">Dias Realizados:</label>
-                        <input type="number" class="form-control" id="diasRealizados" name="diasRealizados" required>
+                <form id="calcular-meta-form" action="/calcular-meta" method="get">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="diasRealizados">Dias Realizados:</label>
+                                <input type="text" class="form-control form-control-sm" id="diasRealizados" name="diasRealizados" pattern="\d*" title="Apenas números são permitidos" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="tpvNovo">TPV Novo:</label>
-                        <input type="number" class="form-control" id="tpvNovo" name="tpvNovo" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tpvLegado">TPV Legado:</label>
+                                <input type="text" class="form-control form-control-sm" id="tpvLegado" name="tpvLegado" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="metaTpvLegado">Meta TPV Legado:</label>
+                                <input type="text" class="form-control form-control-sm" id="metaTpvLegado" name="metaTpvLegado" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="metaTpvNovo">Meta TPV Novo:</label>
-                        <input type="number" class="form-control" id="metaTpvNovo" name="metaTpvNovo" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="margemLegado">Margem Legado:</label>
+                                <input type="text" class="form-control form-control-sm" id="margemLegado" name="margemLegado" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="metaMargemLegado">Meta Margem Legado:</label>
+                                <input type="text" class="form-control form-control-sm" id="metaMargemLegado" name="metaMargemLegado" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="tpvLegado">TPV Legado:</label>
-                        <input type="number" class="form-control" id="tpvLegado" name="tpvLegado" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tpvNovo">TPV Novo:</label>
+                                <input type="text" class="form-control form-control-sm" id="tpvNovo" name="tpvNovo" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="metaTpvNovo">Meta TPV Novo:</label>
+                                <input type="text" class="form-control form-control-sm" id="metaTpvNovo" name="metaTpvNovo" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="metaTpvLegado">Meta TPV Legado:</label>
-                        <input type="number" class="form-control" id="metaTpvLegado" name="metaTpvLegado" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="margemNovo">Margem Novo:</label>
+                                <input type="text" class="form-control form-control-sm" id="margemNovo" name="margemNovo" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="metaMargemNovo">Meta Margem Novo:</label>
+                                <input type="text" class="form-control form-control-sm" id="metaMargemNovo" name="metaMargemNovo" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group mb-2">
-                        <label for="margemNovo">Margem Novo:</label>
-                        <input type="number" class="form-control" id="margemNovo" name="margemNovo" required>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="metaMargemNovo">Meta Margem Novo:</label>
-                        <input type="number" class="form-control" id="metaMargemNovo" name="metaMargemNovo" required>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="margemLegado">Margem Legado:</label>
-                        <input type="number" class="form-control" id="margemLegado" name="margemLegado" required>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label for="metaMargemLegado">Meta Margem Legado:</label>
-                        <input type="number" class="form-control" id="metaMargemLegado" name="metaMargemLegado" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="remuneracaoFixa">Remuneração Fixa:</label>
+                                <input type="text" class="form-control form-control-lg" id="remuneracaoFixa" name="remuneracaoFixa" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="remuneracaoVariavel">Remuneração Variável:</label>
+                                <input type="text" class="form-control form-control-lg" id="remuneracaoVariavel" name="remuneracaoVariavel" pattern="\d*\.?\d*" title="Apenas números e ponto são permitidos" required>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-dark-custom btn-block mt-3">Calcular</button>
                 </form>
@@ -53,5 +95,13 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('calcular-meta-form').addEventListener('submit', function(event) {
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                input.value = input.value.replace(/,/g, '.');
+            });
+        });
+    </script>
 </body>
 </html>

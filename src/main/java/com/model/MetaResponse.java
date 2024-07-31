@@ -1,6 +1,7 @@
 package com.example.meta_calculadora.model;
 
 public class MetaResponse {
+    // Campos existentes
     private String resultadoMetaNovo;
     private String resultadoMetaLegado;
     private String resultadoMargemNovo;
@@ -9,14 +10,21 @@ public class MetaResponse {
     private String resultadoMetaLegadoComissao;
     private String resultadoMargemNovoComissao;
     private String resultadoMargemLegadoComissao;
-    private String comissaoProjetada;
+    private String comissaoProjetada; // Adicionado
     private String projecaoMetaNovo;
     private String projecaoMetaLegado;
     private String projecaoMargemNovo;
     private String projecaoMargemLegado;
+    private String comissao;
+    private String salarioTotal;
+    
+    // Campos adicionais
+    private String metaTpvNovo; // Adicionado
+    private String metaTpvLegado; // Adicionado
+    private String metaMargemNovo; // Adicionado
+    private String metaMargemLegado; // Adicionado
 
-    // Getters and Setters
-
+    // Getters e Setters existentes
     public String getResultadoMetaNovo() {
         return resultadoMetaNovo;
     }
@@ -119,5 +127,54 @@ public class MetaResponse {
 
     public void setProjecaoMargemLegado(String projecaoMargemLegado) {
         this.projecaoMargemLegado = projecaoMargemLegado;
+    }
+
+    public String getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(String comissao) {
+        this.comissao = comissao;
+    }
+
+    public String getSalarioTotal() {
+        return salarioTotal;
+    }
+
+    public void setSalarioTotal(String salarioTotal) {
+        this.salarioTotal = salarioTotal;
+    }
+
+    // Getters e Setters adicionados
+    public String getMetaTpvNovo() {
+        return metaTpvNovo;
+    }
+
+    public void setMetaTpvNovo(String metaTpvNovo) {
+        this.metaTpvNovo = metaTpvNovo;
+    }
+
+    public String getMetaTpvLegado() {
+        return metaTpvLegado;
+    }
+
+    public void setMetaTpvLegado(String metaTpvLegado) {
+        this.metaTpvLegado = metaTpvLegado;
+    }
+
+    public String getMetaMargemNovo() {
+        return metaMargemNovo;
+    }
+
+    public void setMetaMargemNovo(String metaMargemNovo) {
+        this.metaMargemNovo = metaMargemNovo;
+    }
+
+    public String getMetaMargemLegado() {
+        return metaMargemLegado;
+    }
+
+    public void setMetaMargemLegado(String metaMargemLegado) {
+        this.metaMargemLegado = metaMargemLegado;
     }
 }

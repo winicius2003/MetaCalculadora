@@ -20,9 +20,11 @@
                 </div>
             </div>
             <div class="col-md-6 mb-4">
-                <h3>Gráfico de Comissão</h3>
+                <h3>Resultado</h3>
                 <div class="chart-container pie-chart-container">
-                    <canvas id="comissaoChart" class="small-chart"></canvas>
+                    <p><strong>Comissão Projetada:</strong> <span id="comissaoProjetada" th:text="${metaResponse.comissaoProjetada}">0</span>%</p>
+                    <p><strong>Valor da Comissão:</strong> R$<span id="comissao" th:text="${metaResponse.comissao}">0</span></p>
+                    <p><strong>Salário Total:</strong> R$<span id="salarioTotal" th:text="${metaResponse.salarioTotal}">0</span></p>
                 </div>
             </div>
         </div>
@@ -41,24 +43,41 @@
             <div class="col-md-6 mb-4">
                 <h3>Resultados das Comissões</h3>
                 <div class="chart-container">
-                    <p><strong>Comissão Projetada:</strong> <span id="comissaoProjetada" th:text="${metaResponse.comissaoProjetada}">0</span>%</p>
-                    <p><strong>Resultado Comissão TPV Novo:</strong> <span id="resultadoMetaNovoComissao" th:text="${metaResponse.resultadoMetaNovoComissao}">0</span>%</p>
-                    <p><strong>Resultado Comissão TPV Legado:</strong> <span id="resultadoMetaLegadoComissao" th:text="${metaResponse.resultadoMetaLegadoComissao}">0</span>%</p>
-                    <p><strong>Resultado Comissão Margem Novo:</strong> <span id="resultadoMargemNovoComissao" th:text="${metaResponse.resultadoMargemNovoComissao}">0</span>%</p>
-                    <p><strong>Resultado Comissão Margem Legado:</strong> <span id="resultadoMargemLegadoComissao" th:text="${metaResponse.resultadoMargemLegadoComissao}">0</span>%</p>
+                    <p><strong>Resultado Comissão TPV Novo (10%):</strong> <span id="resultadoMetaNovoComissao" th:text="${metaResponse.resultadoMetaNovoComissao}">0</span>%</p>
+                    <p><strong>Resultado Comissão TPV Legado (15%):</strong> <span id="resultadoMetaLegadoComissao" th:text="${metaResponse.resultadoMetaLegadoComissao}">0</span>%</p>
+                    <p><strong>Resultado Comissão Margem Novo (37,5%):</strong> <span id="resultadoMargemNovoComissao" th:text="${metaResponse.resultadoMargemNovoComissao}">0</span>%</p>
+                    <p><strong>Resultado Comissão Margem Legado (37,5%):</strong> <span id="resultadoMargemLegadoComissao" th:text="${metaResponse.resultadoMargemLegadoComissao}">0</span>%</p>
                 </div>
             </div>
         </div>
 
         <!-- Projections -->
-        <h3 class="text-center">Projeção</h3>
-        <div class="chart-container mb-4 text-center">
-            <p><strong>Projeção TPV Novo:</strong> <span id="projecaoMetaNovo" th:text="${metaResponse.projecaoMetaNovo}">0</span></p>
-            <p><strong>Projeção TPV Legado:</strong> <span id="projecaoMetaLegado" th:text="${metaResponse.projecaoMetaLegado}">0</span></p>
-            <p><strong>Projeção Margem Novo:</strong> <span id="projecaoMargemNovo" th:text="${metaResponse.projecaoMargemNovo}">0</span></p>
-            <p><strong>Projeção Margem Legado:</strong> <span id="projecaoMargemLegado" th:text="${metaResponse.projecaoMargemLegado}">0</span></p>
+        <div class="chart-container mb-4">
+            <h3 class="text-center">Projeção e Metas</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Projeção</h4>
+                    <div class="mb-4">
+                        <p><strong>Projeção TPV Novo:</strong> <span id="projecaoMetaNovo" th:text="${metaResponse.projecaoMetaNovo}">0</span></p>
+                        <p><strong>Projeção TPV Legado:</strong> <span id="projecaoMetaLegado" th:text="${metaResponse.projecaoMetaLegado}">0</span></p>
+                        <p><strong>Projeção Margem Novo:</strong> <span id="projecaoMargemNovo" th:text="${metaResponse.projecaoMargemNovo}">0</span></p>
+                        <p><strong>Projeção Margem Legado:</strong> <span id="projecaoMargemLegado" th:text="${metaResponse.projecaoMargemLegado}">0</span></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Metas</h4>
+                    <div class="mb-4">
+                        <p><strong>Meta TPV Novo:</strong> <span id="metaTpvNovo" th:text="${metaResponse.metaTpvNovo}">0</span></p>
+                        <p><strong>Meta TPV Legado:</strong> <span id="metaTpvLegado" th:text="${metaResponse.metaTpvLegado}">0</span></p>
+                        <p><strong>Meta Margem Novo:</strong> <span id="metaMargemNovo" th:text="${metaResponse.metaMargemNovo}">0</span></p>
+                        <p><strong>Meta Margem Legado:</strong> <span id="metaMargemLegado" th:text="${metaResponse.metaMargemLegado}">0</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
         
+        
+
         <!-- Explanation -->
         <div id="explicacao" class="alert alert-info mt-4 text-center" role="alert">
             <!-- Explicação será inserida aqui pelo JavaScript -->
